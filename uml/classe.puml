@@ -1,0 +1,72 @@
+@startuml f
+
+class Utilisateur {
+  id 
+  nom 
+  email 
+  motDePasse 
+  role 
+}
+
+class Client {
+  id 
+  nom 
+  telephone 
+  adresse 
+}
+
+class Produit {
+  id 
+  libelle 
+  prixVente 
+  stock 
+  stockAlerte 
+}
+
+class Vente {
+  id 
+  reference 
+  dateVente 
+  montantTotal 
+  montantVerse 
+  resteAPayer 
+  statut 
+}
+
+class LigneVente {
+  id 
+  quantite 
+  prixUnitaire 
+  sousTotal 
+}
+
+class Paiement {
+  id 
+  montant 
+  datePaiement 
+  mode 
+}
+
+class Approvisionnement {
+  id 
+  dateApprovisionnement 
+  montantTotal 
+}
+
+class LigneApprovisionnement {
+  id 
+  quantite 
+  prixAchat 
+  sousTotal 
+}
+
+Utilisateur "" -- "" Vente 
+Client "" -- "" Vente 
+Vente "" -- "" LigneVente 
+Produit "" -- "" LigneVente 
+Vente "" -- "" Paiement 
+
+Approvisionnement "" -- "" LigneApprovisionnement 
+Produit "" -- "" LigneApprovisionnement 
+
+@enduml

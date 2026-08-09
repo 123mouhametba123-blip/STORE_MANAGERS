@@ -1,0 +1,48 @@
+@startuml j
+left to right direction
+
+actor Caissier
+actor Gestionnaire
+actor Administrateur
+
+rectangle StoreManagerPro {
+
+  
+  usecase "Enregistrer une vente" as UC2
+  usecase "Ajouter des articles" as UC3
+  usecase "Choisir un mode de paiement" as UC4
+  usecase "Consulter les ventes" as UC5
+  usecase "Gérer les clients" as UC6
+  usecase "Gérer les dettes" as UC7
+  usecase "Enregistrer un versement" as UC8
+  usecase "Gérer les approvisionnements" as UC9
+  usecase "Gérer le stock" as UC10
+  usecase "Gérer les produits" as UC11
+  usecase "Gérer les utilisateurs" as UC12
+  usecase "Consulter le tableau de bord" as UC13
+}
+
+Caissier -- UC2
+Caissier -- UC3
+Caissier -- UC4
+Caissier -- UC5
+
+Gestionnaire -- UC5
+Gestionnaire -- UC6
+Gestionnaire -- UC7
+Gestionnaire -- UC8
+Gestionnaire -- UC9
+Gestionnaire -- UC10
+Gestionnaire -- UC11
+Gestionnaire -- UC13
+
+Administrateur -- UC12
+Administrateur -- UC13
+Administrateur -- UC11
+Administrateur -- UC10
+
+UC2 .> UC3 : <<include>>
+UC2 .> UC4 : <<include>>
+UC7 .> UC8 : <<include>>
+
+@enduml

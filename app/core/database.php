@@ -5,7 +5,7 @@ function connexionDB():PDO{
 
 try {
     $pdo = new PDO(
-        "pgsql:host=localhost;dbname=requetes;port=5432",
+        "pgsql:host=localhost;dbname=store_managers;port=5432",
         "postgres",
         "postgres"
     );
