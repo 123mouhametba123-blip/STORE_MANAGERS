@@ -22,27 +22,5 @@ rectangle StoreManagerPro {
   usecase "Consulter le tableau de bord" as UC13
 }
 
-Caissier -- UC2
-Caissier -- UC3
-Caissier -- UC4
-Caissier -- UC5
-
-Gestionnaire -- UC5
-Gestionnaire -- UC6
-Gestionnaire -- UC7
-Gestionnaire -- UC8
-Gestionnaire -- UC9
-Gestionnaire -- UC10
-Gestionnaire -- UC11
-Gestionnaire -- UC13
-
-Administrateur -- UC12
-Administrateur -- UC13
-Administrateur -- UC11
-Administrateur -- UC10
-
-UC2 .> UC3 : <<include>>
-UC2 .> UC4 : <<include>>
-UC7 .> UC8 : <<include>>
 
 @enduml

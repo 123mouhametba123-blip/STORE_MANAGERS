@@ -60,13 +60,4 @@ class LigneApprovisionnement {
   sousTotal 
 }
 
-Utilisateur "" -- "" Vente 
-Client "" -- "" Vente 
-Vente "" -- "" LigneVente 
-Produit "" -- "" LigneVente 
-Vente "" -- "" Paiement 
-
-Approvisionnement "" -- "" LigneApprovisionnement 
-Produit "" -- "" LigneApprovisionnement 
-
 @enduml
